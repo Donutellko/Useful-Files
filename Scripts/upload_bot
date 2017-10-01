@@ -1,0 +1,15 @@
+#!/bin/bash
+
+mount_folder=$HOME"/Development/AzureServer"
+copy_destination=$mount_folder"/site/wwwroot/App_Data/jobs/continuous/DonutellkoBot2"
+copy_source=$HOME"/Development/IdeaProjects/DonutellkoBot/classes/artifacts/donutellko_jar"
+filename="donutellko.jar"
+
+# Попытка подключиться
+mount_azure
+
+echo "Loading "$filename" to server..."
+cp "$copy_source/$filename" "$copy_destination/$filename"
+echo "It seems to be done."
+
+exit 0

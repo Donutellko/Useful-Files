@@ -1,0 +1,39 @@
+Конфиги
+	~/.bashrc #хранит конфиги и alias'ы
+	~/.bash_history # хранит введённые команды
+	
+Лайфхаки
+	!! #заменяется на прошлый ввод
+	
+Основные команды
+	dir # содержимое текущей папки
+	ls  # выводит то же, что и dir, но с подсветочкой
+	
+	man command #глобальный мануал
+	top и htop #выводят потребление ресурсов процессами и LoadAvg (за 1, 5 и 15 минут)
+	sudo swapon /dev/sdb4
+	
+	ln -s ~/target.txt ~/link_name		#Символьная ссылка
+	sudo add-apt-repository ppa:blah-blah/blah # Добавить репозиторий
+	java -jar ~/lol.jar #запуск .jar
+	lspci -k | grep -A 2 -E "(VGA|3D)" #выводит подробности о видеокарте
+	
+	curlftpfs #позволяет монтировать ftp-сервер как локальную файловую систему
+	adbconnect 192.168.0.100:5555 
+	
+	
+Alias
+	# хранятся в ~/.bashrc
+	alias fuck="sudo !!" # выполняет предыдущую команду от суперюзера
+	alias install="sudo apt-get install"
+	alias poweroff="sudo shutdown -h now"
+	
+	
+Нужные пакеты
+	git
+	conky
+	curlftpfs # монтирование ftp
+	htop
+	copyq #менеджер буфера обмена
+	sublime-text
+	notepadqq 		ppa:notepadqq-team/notepadqq
