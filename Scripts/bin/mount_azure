@@ -1,0 +1,19 @@
+#!/bin/bash
+
+mount_folder=$HOME"/Development/AzureServer"
+username="Donutellko"
+password_dir="$HOME/Documents/AzurePassword.txt"
+password=$(cat $password_dir)
+server_url="waws-prod-sn1-049.ftp.azurewebsites.windows.net/"
+
+ftp_url="ftp://$username:$password@$server_url"
+
+echo "expecting to be mounted to $mount_folder"
+
+if [[("$mount_folder/site")]]
+then
+echo "trying to mount"
+curlftpfs -o big_writes $ftp_url  $mount_folder
+fi
+
+exit 0

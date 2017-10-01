@@ -1,0 +1,23 @@
+Advanced Java
+Насрединов Тимур
+	timur.technopolis@mail.ru
+	polis.mail.ru/profile/t.nasredinov
+	github.com/TimurNasredinov/advanced_java_course_2017
+
+Контрольные точки ДЗ:
+	15 октября
+	15 ноября
+	15 декабря
+	
+Рекомендации:
+	Подкаст по Java "Разбор полётов", чат Telegram.
+	RadioT, TechZen
+	Лекции Алексея Фёдорова
+
+
+Лекция 1.
+	GWT
+	JDK > JRE
+	
+Лекция 2. (Михаил)
+	
