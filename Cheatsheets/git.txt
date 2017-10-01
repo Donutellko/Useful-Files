@@ -1,1 +1,16 @@
-//Это я видеть не должен
+git init #Первоначальная настройка
+
+git config --global user.name "Donutellko"
+git config --global user.mail "donutellko@gmail.com"
+git config --global core.autocrlf true
+git config --global core.saferlf true
+
+# git remote add origin git@github.com:Donutellko/Useful-Files.git
+git remote add origin https://github.com/Donutellko/Useful-Files.git # Привязка к репозиторию
+git clone https://github.com/Donutellko/Useful-Files.git # Скачивание уже имеющегося
+
+git add . #Добавляет всю текущую папку
+git add lol.txt Files #Добавляет конкретные файлы и папки
+git push -u origin master
+git commit -m "Сommit message"
+
