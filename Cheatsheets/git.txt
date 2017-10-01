@@ -3,7 +3,7 @@ git init #Первоначальная настройка
 git config --global user.name "Donutellko"
 git config --global user.mail "donutellko@gmail.com"
 git config --global core.autocrlf true
-git config --global core.saferlf true
+git config --global core.saferlf true #warn
 
 # git remote add origin git@github.com:Donutellko/Useful-Files.git
 git remote add origin https://github.com/Donutellko/Useful-Files.git # Привязка к репозиторию
