@@ -13,7 +13,10 @@
 	top и htop #выводят потребление ресурсов процессами и LoadAvg (за 1, 5 и 15 минут)
 	sudo swapon /dev/sdb4
 	
-	ln -s ~/target.txt ~/link_name		#Символьная ссылка
+	ln -s ~/target.txt ~/link_name		# Символьная ссылка
+	ln ~/target.txt ~/link_name			# Жёсткая ссылка
+	cp -l ~/target.txt ~/link_name		# Что-то тоже вроде жёсткой ссылки
+	
 	sudo add-apt-repository ppa:blah-blah/blah # Добавить репозиторий
 	java -jar ~/lol.jar #запуск .jar
 	lspci -k | grep -A 2 -E "(VGA|3D)" #выводит подробности о видеокарте

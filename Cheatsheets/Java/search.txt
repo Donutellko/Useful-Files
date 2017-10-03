@@ -1,0 +1,41 @@
+/// Линейный поиск
+private static int binarySearch(int[] arr, int a) {
+	for (int i = 0; i < arr.lenght; i++)
+		if (arr[i] == a) return true;
+	return false;
+}
+
+
+/// Бинарный поиск
+
+
+int BinarySearch(int[] arr, int x) {
+	int i = -1;
+	if (arr != null) {
+		int low = 0, high = arr.length, mid;
+		while (low < high) {
+			mid = (low + high)/2; // Можно заменить на: (low + high) >>> 1, чтоб не возникло переполнение целого
+			if (x == arr[mid]) {
+				i = mid;
+				break;
+			} else {
+				if (x < arr[mid]) {
+					high = mid;
+				} else {
+					low = mid + 1;
+				}
+			}
+		}
+	}
+	return i;
+}
+
+/* НЕ РАБОТАЕТ!!!!
+int binarySearch(int[] arr, int a) {
+	if (arr == null) return -1;ы
+	if (arr[0] == a) return 0; /// КОСТЫЛИЩЕ!!!!
+	int step = (arr.length + 1) / 2, i = step;
+	while (arr[i] != a && step != 0)
+		i += (step /= 2) * (arr[i] > a ? -1 : 1);
+	return (arr[i] == a) ? i : -1;
+}*/ 
