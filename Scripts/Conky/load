@@ -1,0 +1,13 @@
+#!/bin/bash
+pkill conky
+if ps ax | grep "~/Documents/Conky/conkyrc/top_left_CPU_RAM -x" | grep -vq grep
+then
+killall conky
+else
+conky -c ~/Documents/Conky/conkyrc/bottom_left_rss
+conky -c ~/Documents/Conky/conkyrc/top_left_green
+conky -c ~/Documents/Conky/conkyrc/top_right
+conky -c ~/Documents/Conky/conkyrc/bottom_right_shortcuts
+fi
+
+exit

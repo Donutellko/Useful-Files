@@ -1,0 +1,29 @@
+background yes
+own_window yes
+own_window_type desktop
+own_window_transparent yes
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+out_to_console no
+use_xft yes
+xftfont Ubuntu mono:size=11:antialias=true
+update_interval 1
+own_window yes
+double_buffer yes
+draw_shades no
+draw_outline no
+draw_borders no
+stippled_borders 1
+default_color white
+default_shade_color white
+default_outline_color white
+alignment bottom_left
+gap_x 20
+gap_y 40
+use_spacer left
+no_buffers yes
+uppercase no
+minimum_size 1100 100
+
+TEXT
+${color #92c03d}tproger
+$color${rss http://tproger.ru/feed/ 15 item_titles 5}

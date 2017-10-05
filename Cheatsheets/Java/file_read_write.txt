@@ -31,4 +31,5 @@ try {
 
 
 
-// Это я увидеть должен
+final Scanner     in  = new Scanner    (new BufferedInputStream (new FileInputStream (new File("input.txt" ))));
+final PrintStream out = new PrintStream(new BufferedOutputStream(new FileOutputStream(new File("output.txt"))));

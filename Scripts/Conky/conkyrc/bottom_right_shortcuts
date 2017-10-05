@@ -1,0 +1,56 @@
+# set to yes if you want Conky to be forked in the background
+background yes
+
+own_window yes
+own_window_type desktop
+own_window_transparent yes
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+out_to_console no
+use_xft yes
+xftfont Ubuntu mono:size=11:antialias=true
+update_interval 1
+# Create own window instead of using desktop (required in nautilus)
+own_window yes
+# Use double buffering (reduces flicker, may not work for everyone)
+double_buffer yes
+draw_shades no
+
+# Draw outlines?
+draw_outline no
+
+# Draw borders around text
+draw_borders no
+
+# Stippled borders?
+stippled_borders 1
+
+# border width
+border_width 20
+
+# Default colors and also border colors
+default_color lightgrey
+default_shade_color white
+default_outline_color white
+alignment br
+gap_x 10
+gap_y 30
+use_spacer left
+no_buffers yes
+uppercase no
+
+maximum_width 340
+minimum_size 300 200
+TEXT
+${font Ubuntu mono:size=13}${color #92c03d}shortcuts:$font$color
+${color}Ctrl + Alt + T          ${goto 180}${color white} Terminal
+${color}Ctrl + Alt + Esc        ${goto 180}${color white} System Monitor
+${color}Ctrl + Alt + C          ${goto 180}${color white} Load Conky
+${color}Ctrl + Shift + PrScr    ${goto 180}${color white} Screenshot of area
+${color}Ctrl + Shift + Alt + R  ${goto 180}${color white} Screen record
+${color}Win + L                 ${goto 180}${color white} Hibernate
+${color}Win + D                 ${goto 180}${color white} Desktop
+${color}Ctrl + Win + W          ${goto 180}${color white} Reboot to Windows
+${color}Ctrl + Alt + K          ${goto 180}${color white} Open Google Keep
+
+#$stippled_hr
+#colors: #6495ed #656565 #6495ed lightgrey #92c03d black white

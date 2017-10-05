@@ -1,0 +1,113 @@
+# set to yes if you want Conky to be forked in the background
+background yes
+
+own_window yes
+own_window_type desktop
+own_window_transparent yes
+own_window_argb_visual true
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+out_to_console no
+use_xft yes
+xftfont Ubuntu mono:size=11:antialias=true
+update_interval 1
+
+# Create own window instead of using desktop (required in nautilus)
+own_window yes
+
+# Use double buffering (reduces flicker, may not work for everyone)
+double_buffer yes
+maximum_width 320
+
+draw_shades no
+
+# Draw outlines?
+draw_outline no
+
+# Draw borders around text
+draw_borders no
+
+# Stippled borders?
+stippled_borders 1
+
+# border width
+border_width 20
+
+# Default colors and also border colors
+default_color white
+default_shade_color white
+default_outline_color white
+
+# Text alignment, other possible values are commented
+alignment top_left
+
+# Gap between borders of screen and text
+gap_x 120
+gap_y 35
+
+# Add spaces to keep things from moving about?  This only affects certain objects.
+use_spacer left
+
+# Subtract file system buffers from used memory?
+no_buffers yes
+
+# set to yes if you want all text to be in uppercase
+uppercase no
+
+
+
+
+
+
+
+
+
+
+
+
+
+TEXT
+    ${color #92c03d}${font Openlogos:size=30}Linux Mint$font
+$alignc${color #92c03d}${font Audiowide:size=20}MSI GT780DX$font
+
+${alignc}$color $kernel on $machine
+
+${color #6495ed}$color$alignc$uptime ${color lightgrey}uptime | ${color lightgrey}loadavg:${color} ${loadavg 1}${color lightgrey}
+
+${color #656565}$stippled_hr$color
+
+$color${alignc}${addr wlp3s0} | $color${curl https://icanhazip.com}
+${color lightgrey}${alignc}down:$color${totaldown wlp3s0} | ${color lightgrey}up:$color${totalup wlp3s0}  
+
+${color #656565}$stippled_hr$color
+
+${color #6495ed}${alignc}${color lightgrey}Intel Core i7-2670QM @ $color${freq_g} GHz${color lightgrey}
+
+${color lightgrey}1 ${color #92c03d}${cpubar cpu1 6,130}$color $alignr ${color lightgrey}5 ${color #92c03d}${cpubar cpu5 6,130}$color $alignr 
+${color lightgrey}2 ${color #92c03d}${cpubar cpu2 6,130}$color $alignr ${color lightgrey}6 ${color #92c03d}${cpubar cpu6 6,130}$color $alignr 
+${color lightgrey}3 ${color #92c03d}${cpubar cpu3 6,130}$color $alignr ${color lightgrey}7 ${color #92c03d}${cpubar cpu7 6,130}$color $alignr 
+${color lightgrey}4 ${color #92c03d}${cpubar cpu4 6,130}$color $alignr ${color lightgrey}8 ${color #92c03d}${cpubar cpu8 6,130}$color $alignr 
+${color black}${cpugraph 35,320 5000a0 92c03d}${color white}   
+
+${color #92c03d}ram   ${membar 5,160} ${alignr}$color$memfree free
+${color #92c03d}swap  ${swapbar 5,160} ${alignr}$color$swapfree free
+
+${color #92c03d}/     ${fs_bar 5,160 /} ${alignr}$color${fs_free /} free
+${color #92c03d}Data  ${fs_bar 5,160 /media/donat/Data} ${alignr}$color${fs_free /media/donat/Data} free
+
+${color #656565}$stippled_hr$color
+
+${alignc}$color$processes ${color lightgrey}processes $color$running_processes${color lightgrey} running
+
+${color}by cpu usage           mem   cpu% ${alignr}user
+${color #92c03d} ${top name 1}  ${top mem_res 1} ${top cpu 1} $alignr ${top user 1}
+${color lightgrey} ${top name 2}  ${top mem_res 2} ${top cpu 2} $alignr ${top user 2}
+${color lightgrey} ${top name 3}  ${top mem_res 3} ${top cpu 3} $alignr ${top user 3}
+${color lightgrey} ${top name 4}  ${top mem_res 4} ${top cpu 4} $alignr ${top user 4}
+
+${color}by mem usage           mem   cpu% ${alignr}user
+${color #92c03d} ${top_mem name 1}  ${top_mem mem_res 1} ${top_mem cpu 1} $alignr ${top_mem user 1}
+${color lightgrey} ${top_mem name 2}  ${top_mem mem_res 2} ${top_mem cpu 2} $alignr ${top_mem user 2}
+${color lightgrey} ${top_mem name 3}  ${top_mem mem_res 3} ${top_mem cpu 3} $alignr ${top_mem user 3}
+${color lightgrey} ${top_mem name 4}  ${top_mem mem_res 4} ${top_mem cpu 4} $alignr ${top_mem user 4}
+
+${color #656565}$stippled_hr$color
