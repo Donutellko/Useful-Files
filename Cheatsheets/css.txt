@@ -1,0 +1,59 @@
+{// Фигурная скобка для адекватного отображения в Atom при подсветке css.
+
+Собственные классы начинаются с точки.
+Применяется последнее подошедшее правило.
+Проценты -- от размера родителей.
+Каскады работают с конца
+
+Измерения:
+    px
+    dt
+    rem     отсчитывается от шрифта
+    em
+    deg     градусы по часовой стрелке
+    vw, vh  единицы (грубо говоря проценты) от размера экрана
+
+
+font-weight
+font-size // large, small
+line-height
+margin, margin-(left, right, top, bottom)
+
+Flexbox - годнота
+
+.lesson_description,
+.lesson.name {
+  font-size:15
+}
+
+@font-face {
+    font-family:
+        import ..., //множественные источники
+        import ...,
+        url(.../Verdana.ttf)
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5, // для разных дисплеев типа
+    (min-resolution: 1.5dppx) { // для разных разрешений
+            .icon {
+                -webkit-transform: rotate(45deg);
+                transform: rotate(45);
+            }
+        }
+
+@keyframes identifier { // простая анимация
+    0% {top:0; left: 0;} //
+    30%, 50% {top:100px}
+    100% {top: 100px; left:100%}
+}
+
+first-child
+last-child
+nth-child(2n)
+
+input:not(.__accept) {
+
+}
+
+
+lesson1 h2 {.. // каскад. Работает с конца
