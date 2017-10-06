@@ -1,0 +1,35 @@
+
+/// Простейшее чтение (окружить try-catch для IOException и FileNotFoundException)
+String fi = "input.txt", fo = "output.txt";
+Scanner scanner = new Scanner (new BufferedReader(new FileReader(fi)));
+BufferedReader reader = new BufferedReader(new FileReader(fi)));
+PrintWriter writer = new PrintWriter(new FileWriter(fo)));
+
+
+InputStream is = new FileInputStream(path);
+try {
+return IOUtils.toString(is, "windows-1251");
+}
+finally { is.close(); }
+
+
+
+try {
+	File file = new File(path);
+	BufferedReader reader = new BufferedReader(new FileReader(file));
+	StringBuilder result = new StringBuilder();
+	try {
+		while (true) result.append(reader.readLine());
+	} catch (IOException e) {
+		e.printStackTrace();
+	}
+	return result.toString();
+} catch (FileNotFoundException e) {
+	e.printStackTrace();
+	return null;
+}
+
+
+
+final Scanner     in  = new Scanner    (new BufferedInputStream (new FileInputStream (new File("input.txt" ))));
+final PrintStream out = new PrintStream(new BufferedOutputStream(new FileOutputStream(new File("output.txt"))));

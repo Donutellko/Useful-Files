@@ -1,0 +1,40 @@
+<!DOCTYPE="html">
+<html lang="en">
+	<head>
+		
+	</head>
+	<body>
+		<h1>Заголовок</h1>
+		<h5>Заголовок</h5>
+		<div role="" aria-label="для accessibility">
+			<ul>
+				<li>Элемент 1</li>
+				<li>Элемент 2</li>
+			</ul>
+		</div>
+		<div class="main-wrapper">
+			<a href="http://example.com/lol.htm">link</a>
+			<a href="../lol.htm">link</a>
+			<img src="/img/lol.png" />
+			<iframe src=""> </iframe>
+		</div>
+	</body>
+</html>
+
+
+Функциональные теги
+	<form method="POST" action="/processingFormURL">
+		<input type="text" name="login" />
+		<input type="password" name="password" />
+	</form>
+
+	<video width="" height="" controls>
+		<source src="lol.mp4" type="mp4">
+		Замещающий текст
+	</video>
+
+Семантические теги
+	<blockquote>
+		L0o0o0o00oOo0o0OOol...
+	</blockquote>
+	<section>Some content</section>

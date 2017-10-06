@@ -1,0 +1,51 @@
+#pragma once // чтобы конкретный исходный файл при компиляции подключался строго один раз
+#include ..
+	<cstdlib> 
+	<iostream>
+#include "library.h"
+
+#define stop asm { nop } // чтобы можно было ставить breakpoint в любое место
+#define stop asm ( "nop") ;
+
+typedef unsigned int natural
+typedef natural * const natural_array
+
+using namespace std; // дурной тон
+
+int i = 0; // то же, что int i(0);
+
+for (int i = 0; i < 10; i++) { }
+if (a == b) { } else if (a == c) { } else { }
+while (i--) { }
+
+int[10] array = new int[10];
+int * const array = new int[size];
+int a = array[5];
+int* b = *array[5];
+(a == &b) == true,
+delete[] array;
+while (i--) *array++ = f();
+
+typedef int(*agregator)(int, int); // Ссылка на функцию
+
+
+int main(void) { 
+	return 0; // необязательно
+}
+
+std::cout << "Hello, World!" << std::endl;
+
+a ^= b ^= a ^= b; // swap
+
+Файл с include и define принято называть stdafx.h
+^= += -= /= *= // Кванторы
+
+
+
+
+
+ООП:
+
+point::point(int x, int y);
+Список инициализаторов после двоеточия.
+point::point() : x(0), y(0);

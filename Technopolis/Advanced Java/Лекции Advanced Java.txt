@@ -1,0 +1,51 @@
+Advanced Java
+Насрединов Тимур
+	timur.technopolis@mail.ru
+	polis.mail.ru/profile/t.nasredinov
+	github.com/TimurNasredinov/advanced_java_course_2017
+
+Контрольные точки ДЗ:
+	15 октября
+	15 ноября
+	15 декабря
+	
+Рекомендации:
+	Подкаст по Java "Разбор полётов", чат Telegram.
+	RadioT, TechZen
+	Лекции Алексея Фёдорова
+
+
+Лекция 1.
+	GWT
+	JDK > JRE
+	
+Лекция 2. (Михаил)
+	
+	
+
+Лекция 3.
+	В Java заголовки объектов занимают 16 байт.
+	
+	IDEA: 
+		Ctrl+Shift+A: Поиск по action и settings
+		Ctrl+Shift+[arrow]: Перенос строки/метода/класса.
+
+	sdkman.io -- некий менеджеров пакетов для джавовских разрабов
+
+	Import Settings в командном проекте -- путь к счастью и процветанию.	
+
+	Лучший способ оговорить контракт -- это интерфейс.
+	Быстро создать Юнит-Тест: ПКМ по интерфейсу > Generate > Create test
+	
+	public void testEvaluate() throws Exception {
+		Assert.assertEquals("It works correctyl", 1, mySin(pi));
+	}
+
+	public void testEvaluateNegative() throws Exception {
+		try {
+			myArcSin(2);
+			Assert.fail("Exception is expected.");
+		} catch (Exception e) {
+			Assert.assertTrue(true);
+		}
+	}

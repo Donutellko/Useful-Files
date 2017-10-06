@@ -1,0 +1,36 @@
+#!/bin/bash
+
+#годнота: https://www.opennet.ru/docs/RUS/bash_scripting_guide/x2565.html
+
+version=1
+
+file1="file1.txt" file2="file2.txt
+cp $HOME"/"$file1 "$HOME/$file2"
+unset file1 file2
+
+echo "$PATH = "$PATH
+$(echo "Hi, stupid volchara!")
+
+if [ -n "" ]; #если строка не пустая, -z если пустая
+
+if [[]]; # точка с запятой обязательна, если then на той же строке
+	then
+	elif
+	else
+fi
+
+case "$USER" in
+	"donat"|"donut") echo "Hello, Donat!";;
+	*) echo "Hello, unknown user.";;
+esac
+
+
+### ПРИМЕЧАНИЯ
+#	[[]] круче, чем []
+#	
+#	
+### Логические операции
+#	&&
+#	||
+#	
+###	
