@@ -13,10 +13,10 @@ public class Main {
         	x = foo(x);
 	        print(i, x, prev-x);
 	        i++;
-        }  while (!enougnt(x, prev, eps, a));
+        }  while (!enough(x, prev, eps, a));
     }
 
-	private static boolean enougnt(double x, double prev, double eps, double a) {
+	private static boolean enough(double x, double prev, double eps, double a) {
 		return ((a / (1 - a)) * Math.abs(x - prev) < eps);
     }
 

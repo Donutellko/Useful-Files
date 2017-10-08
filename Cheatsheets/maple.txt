@@ -2,15 +2,36 @@
 	Нет знака умножения между переменными
 	Забыто двоеточие
 
+// Импорт:
+	with(linalg);
+	
 //	Комбинации клавиш:
 	Новый prompt: Alt+Enter
 
+// Объявления:	
+	x(t) := t + 15; 
+	x(n,t) := n/(n + t);
+	a := -10; b := 10;
+
+evalf(x(15)) // возвращает численное значение
+
+// Графики:
+	plot(y(x)=1/x, x=0..10, y = 5..7)
+	plot([x0(t), x(0, t), x(1, t), x(2, t), x(3, t), x(6, t), x(10, t), x(15, t), x(25, t), x(50, t), x(100, t)], t = a .. b, x = -.5 .. .5)
+
+	plot(f(x), x = -l .. l); with(plots); with(plottools); display([seq(translate(p, 2*l*k, 0), k = -1 .. 1)], scaling = constrained)
+
+// Матрицы:
+	with(linalg) // или LinearAlgebra
+	A := Matrix(4, 4, [[-3, 3, 2, 1], [3, 2, -5, -1], [-9, -2, -1, 6], [3, 3, 2, 1]])
+
 	
-x(t) := t + 15; 
-x(n,t) := n/(n + t);
-a := -10; b := 10;
+// Цикл:
+	n := 0; 
+	while a*p/(1-a) > u do 
+		x0 := x1; 
+		x1 := evalf(f(x0)); 
+		p := x0-x1; n := n+1 
+	end do
 
-plot(y(x)=1/x, x=0..10, y = 5..7)
-plot([x0(t), x(0, t), x(1, t), x(2, t), x(3, t), x(6, t), x(10, t), x(15, t), x(25, t), x(50, t), x(100, t)], t = a .. b, x = -.5 .. .5)
-
-plot(f(x), x = -l .. l); with(plots); with(plottools); display([seq(translate(p, 2*l*k, 0), k = -1 .. 1)], scaling = constrained)
+p2 := proc (x, y) options operator, arrow; sqrt(add(abs(x[k]-y[k]), k = 1 .. 4)) end proc // разность k-элементов матриц x и y
