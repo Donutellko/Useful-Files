@@ -13,10 +13,10 @@ public class Main {
         	x = foo(x);
 	        print(i, x, prev-x);
 	        i++;
-        }  while (!enougnt(x, prev, eps, a));
+        }  while (!enough(x, prev, eps, a));
     }
 
-	private static boolean enougnt(double x, double prev, double eps, double a) {
+	private static boolean enough(double x, double prev, double eps, double a) {
 		return ((a / (1 - a)) * Math.abs(x - prev) < eps);
     }
 
@@ -26,8 +26,8 @@ public class Main {
 
     static void print (int i, double x, double diff) {
         System.out.println(
-			i + ":\t" + 
-			String.format("%.7f", x) + "\t" + 
+			i + ":\t" +
+			String.format("%.7f", x) + "\t" +
 			String.format("%.7f", diff)
 		);
     }
