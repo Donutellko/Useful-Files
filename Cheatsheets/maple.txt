@@ -1,3 +1,7 @@
+// Полезная ссылочка: http://window.edu.ru/catalog/pdf2txt/929/53929/26309?p_page=2
+// Включить сглаживание шрифтов: Tools > Options > Display > Font antialiasing
+
+
 // ������ ������:
 	��� ����� ��������� ����� �����������
 	������ ���������
@@ -35,3 +39,8 @@ evalf(x(15)) // ���������� ��������� ��
 	end do
 
 p2 := proc (x, y) options operator, arrow; sqrt(add(abs(x[k]-y[k]), k = 1 .. 4)) end proc // �������� k-��������� ������ x � y
+
+Подавление вывода: в конце команды двоеточие
+
+Установить количество знаков после запятой (-1 -- все):
+	interface(displayprecision = 5);

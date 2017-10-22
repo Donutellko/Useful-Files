@@ -1,0 +1,23 @@
+# Просмотр кодов и названий нажимаемых клавиш
+xev | grep keysym
+
+
+Window Managers:
+  Тайловые
+    awesome
+    i3
+    Xmonad
+
+
+
+Команды, выполняемые при запуске, находятся в ~/.xsessionrc
+
+Выбор раскладок и способа их изменения:
+  exec setxkbmap "us,ru" ",winkeys" "grp:ctrl_shift_toggle"
+Создание скриншотов и сохранение их в папку:
+  bindsym Print exec scrot 'f%Y-%m-%d-%s_$wx$h.png' -e 'mv $f $HOME/Pictures/Screenshots'
+
+
+
+  #// Не забудьте про автозапуск gnome-settings-daemon, чтобы был корректный рендеринг шрифтов, а на ноутбуках работали сочетания клавиш с Fn.
+  #// А зачем добавлять setxkbmap в «.xsessionrc». Настройкам переключения раскладки клавиутуры самое место в «/etc/default/keyboard».
